@@ -2,7 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Gate;
+use App\Repositories\customers\customersRepository;
+use App\Repositories\customers\customersRepositoryInterface;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -30,8 +31,8 @@ class AuthServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(
-            \App\Repositories\customers\customersRepositoryInterface::class,
-            \App\Repositories\customers\customersRepository::class
+            customersRepositoryInterface::class,
+            customersRepository::class
         );
     }
 }

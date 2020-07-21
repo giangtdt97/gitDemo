@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class pointTransaction extends Model
+class PointTransaction extends Model
 {
     //
 }
