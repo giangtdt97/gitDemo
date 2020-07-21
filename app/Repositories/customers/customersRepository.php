@@ -9,6 +9,6 @@ class customersRepository extends BaseRepository implements customersRepositoryI
 
     public function getModel()
     {
-        return \App\Model\customers::class;
+        return \App\Models\customers::class;
     }
 }
