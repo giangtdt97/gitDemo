@@ -1,14 +1,14 @@
 <?php
-namespace App\Repositories\Post;
+namespace App\Repositories\customers;
 
 use App\Repositories\BaseRepository;
-use App\Repositories\customers\customersRepositoryInterface;
+use App\Repositories\Customers\customersRepositoryInterface;
 
-class ProductRepository extends BaseRepository implements customersRepositoryInterface
+class customersRepository extends BaseRepository implements customersRepositoryInterface
 {
 
     public function getModel()
     {
-        return \App\customers::class;
+        return \App\Model\customers::class;
     }
 }
