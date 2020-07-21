@@ -1,14 +1,20 @@
 <?php
-namespace App\Repositories\customers;
+namespace App\Repositories\Post;
 
 use App\Repositories\BaseRepository;
 use App\Repositories\customers\customersRepositoryInterface;
 
-class customersRepository extends BaseRepository implements customersRepositoryInterface
+abstract class customersRepository extends BaseRepository implements customersRepositoryInterface
 {
 
-    public function getModel()
+
+        public function getModel()
     {
-        return \App\customer::class;
+        return \App\Models\Customer::class;
+    }
+
+        public function getCustomer()
+    {
+        return $this->model->select('first_name')->take(50)->get();
     }
 }
